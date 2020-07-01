@@ -45,8 +45,7 @@ mysql -u root -pVeRySeCuRePlAiNtExTpAsSwOrD -e "FLUSH PRIVILEGES;"
 
 mkdir /tmp/wp
 
-#wget https://wordpress.org/latest.zip -O /tmp/wp/latest.zip
-wget m1/latest.zip -O /tmp/wp/latest.zip
+wget https://wordpress.org/latest.zip -O /tmp/wp/latest.zip
 
 unzip /tmp/wp/latest.zip -d /var/www/
 
