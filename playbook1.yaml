@@ -1,0 +1,16 @@
+---
+
+- hosts: web-server
+  become: true
+
+  tasks:
+  - name: Install HTTPD
+    dnf: name=httpd state=present
+  - name: Start and Enable HTTPD
+    service: name=httpd state=started enabled=true
+  - name: Allow in Firewalld
+    firewalld: service=http state=enabled permanent=yes immediate=yes
+  - name: Create file with the $HOSTNAME
+    shell: echo "$HOSTNAME" > /var/www/html/index.html
+    args:
+            executable: /bin/bash
