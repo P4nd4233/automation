@@ -70,8 +70,7 @@ mysql -u root -p"$msp" -e "FLUSH PRIVILEGES;"
 mkdir /tmp/wp
 
 #Downloading WordPress
-#wget https://wordpress.org/latest.zip -O /tmp/wp/latest.zip
-wget m1/latest.zip -O /tmp/wp/latest.zip
+wget https://wordpress.org/latest.zip -O /tmp/wp/latest.zip
 
 #Unzipping the archive at /var/www/wordpress
 echo "Unzipping archive ..."
